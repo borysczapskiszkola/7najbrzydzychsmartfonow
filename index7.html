@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podstrona</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cont1">
+    <div class="tytul">
+      <h4>7 najbrdzydszych <br> smartfonów</h4>
+    </div>
+    <div class="zdj">
+      <a href="index.html"><img class="zdj1" src="img/logo.png" alt="LOGO"></a> 
+    </div>
+    
+    <div class="menu1">
+      <a href="#phone">Telefon</a>
+      <a href="#opis">Opis</a>
+      <a href="#film">Filmik</a>
+  </div>
+  <span class="hr"></span>
+  <div class="menu2">
+      <a href="https://www.gsmmaniak.pl/" target="_blank">Więcej o telefonach</a>
+      <a href="https://www.techmaniak.pl/" target="_blank">Więcej o technologii</a>
+      <a href="https://www.tabletmaniak.pl/" target="_blank">Więcej o tabletach</a>
+  </div>
+  <div class="lines" onclick="toggleMenu()">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+  </div>
+</div>
+<div class="menu">
+  <div class="menu1-1">
+      <a onclick="toggleMenu()" href="#phone">Telefon</a>
+      <a onclick="toggleMenu()" href="#opis">Opis</a>
+      <a onclick="toggleMenu()" href="#film">Filmik</a>
+
+      <a onclick="toggleMenu()" href="https://www.gsmmaniak.pl/" target="_blank">Więcej o telefonach</a>
+      <a onclick="toggleMenu()" href="https://www.techmaniak.pl/" target="_blank">Więcej o technologii</a>
+      <a onclick="toggleMenu()" href="https://www.tabletmaniak.pl/" target="_blank">Więcej o tabletach</a>
+  </div>
+</div>
+
+  </div>
+  <div class="cont2">
+      <div id="phone" class="cont cont4" style="object-fit: cover ;">
+        <div class="mySlides">
+          <img class="imgz" src="img/6.jpg" style=" width: 100%; object-fit: cover; vertical-align: middle;">
+        </div>
+        
+      </div>
+      <div class="cont cont5" style="overflow-y: auto;">
+        <p id="opis" class="paragraph">Pantech Curitel GA400b to kompaktowy telefon komórkowy, który wyróżnia się prostotą i solidną konstrukcją. Z ekranem o rozmiarze 2.1 cala, model ten oferuje wygodne użytkowanie i czytelną prezentację treści. Wyposażony w aparat o rozdzielczości 1.3 MP, Pantech Curitel GA400b pozwala rejestrować codzienne momenty w wystarczającej jakości. Długi czas czuwania, sięgający do 180 godzin, sprawia, że telefon ten jest niezawodnym towarzyszem podczas podróży. Z 256 MB pamięci wewnętrznej użytkownik ma wystarczająco miejsca na przechowywanie kontaktów, wiadomości i podstawowych plików. Telefon ten działa na dedykowanym systemie operacyjnym Pantech, co przekłada się na stabilność działania i łatwe korzystanie z funkcji. Pantech Curitel GA400b to propozycja dla osób ceniących prostotę i niezawodność w codziennym użytkowaniu telefonu komórkowego.</p>
+      </div>
+      <div id="film" class="cont cont66">
+        <p>brak filmiku</p>
+      </div>
+  </div>
+  <div class="cont3">
+    <h3>Borys Czapski 2023 2tc</h3>
+  </div><br>
+  <script>
+    function toggleMenu() {
+  var menu = document.querySelector(".menu");
+  var body = document.querySelector("body");
+  var cont3 = document.querySelector(".cont3");
+  var html = document.querySelector("html");
+
+  if (menu.style.transform === "translateX(0%)") {
+    menu.style.transform = "translateX(-100%)";
+    body.style.overflow = "hidden";
+    html.style.overflow = "hidden";
+    body.style.overflowY = "auto";
+    html.style.overflowY = "auto";
+    cont3.style.display = "flex";
+  } else {
+    menu.style.transform = "translateX(0%)";
+    menu.style.height = "calc(100vh - 99px)";
+    body.style.overflow = "hidden";
+    html.style.overflow = "hidden";
+    cont3.style.display = "none";
+  }
+}
+
+
+
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      } 
+      slides[slideIndex-1].style.display = "flex";  
+      setTimeout(showSlides, 4000);
+    }
+  </script>
+</body>
+</html>

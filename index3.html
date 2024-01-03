@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podstrona</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cont1">
+    <div class="tytul">
+      <h4>7 najbrdzydszych <br> smartfonów</h4>
+    </div>
+    <div class="zdj">
+      <a href="index.html"><img class="zdj1" src="img/logo.png" alt="LOGO"></a> 
+    </div>
+    
+    <div class="menu1">
+      <a href="#phone">Telefon</a>
+      <a href="#opis">Opis</a>
+      <a href="#film">Filmik</a>
+  </div>
+  <span class="hr"></span>
+  <div class="menu2">
+      <a href="https://www.gsmmaniak.pl/" target="_blank">Więcej o telefonach</a>
+      <a href="https://www.techmaniak.pl/" target="_blank">Więcej o technologii</a>
+      <a href="https://www.tabletmaniak.pl/" target="_blank">Więcej o tabletach</a>
+  </div>
+  <div class="lines" onclick="toggleMenu()">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+  </div>
+</div>
+<div class="menu">
+  <div class="menu1-1">
+      <a onclick="toggleMenu()" href="#phone">Telefon</a>
+      <a onclick="toggleMenu()" href="#opis">Opis</a>
+      <a onclick="toggleMenu()" href="#film">Filmik</a>
+
+      <a onclick="toggleMenu()" href="https://www.gsmmaniak.pl/" target="_blank">Więcej o telefonach</a>
+      <a onclick="toggleMenu()" href="https://www.techmaniak.pl/" target="_blank">Więcej o technologii</a>
+      <a onclick="toggleMenu()" href="https://www.tabletmaniak.pl/" target="_blank">Więcej o tabletach</a>
+  </div>
+</div>
+
+  </div>
+  <div class="cont2">
+      <div id="phone" class="cont cont4" style="object-fit: cover ;">
+        <div class="mySlides">
+          <img class="imgz" src="img/2.jpg" style=" width: 100%; object-fit: cover; vertical-align: middle;">
+        </div>
+        
+      </div>
+      <div class="cont cont5" style="overflow-y: auto;">
+        <p id="opis" class="paragraph">Nokia 6350 to klasyczny telefon komórkowy, który wyróżnia się nie tylko solidną konstrukcją, ale także funkcjonalnością. Zaprojektowany z myślą o wygodnym użytkowaniu, model ten oferuje 2.2-calowy wyświetlacz, który sprawia, że korzystanie z telefonu jest przyjemne i czytelne. Wyposażony w aparat o rozdzielczości 2.0 MP, Nokia 6350 umożliwia rejestrowanie chwil z codziennego życia w akceptowalnej jakości. Jego bateria, zdolna do 300 godzin czuwania, sprawia, że nie musimy się martwić o nagłe rozładowanie podczas długich dni. Zintegrowana pamięć o pojemności 512 MB daje użytkownikowi wystarczająco miejsca na przechowywanie kontaktów, wiadomości i zdjęć. Telefon działa na systemie Seria 40, co zapewnia stabilność działania oraz łatwe nawigowanie po interfejsie. Nokia 6350 to propozycja dla tych, którzy cenią sobie prostotę, solidność i podstawowe funkcje w komunikacji mobilnej.</p>
+      </div>
+      <div id="film" class="cont cont66">
+        <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/NraUZ-B3lPU?si=aszvH0l6aMRUsdhl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  </div>
+  <div class="cont3">
+    <h3>Borys Czapski 2023 2tc</h3>
+  </div><br>
+  <script>
+    function toggleMenu() {
+  var menu = document.querySelector(".menu");
+  var body = document.querySelector("body");
+  var cont3 = document.querySelector(".cont3");
+  var html = document.querySelector("html");
+
+  if (menu.style.transform === "translateX(0%)") {
+    menu.style.transform = "translateX(-100%)";
+    body.style.overflow = "hidden";
+    html.style.overflow = "hidden";
+    body.style.overflowY = "auto";
+    html.style.overflowY = "auto";
+    cont3.style.display = "flex";
+  } else {
+    menu.style.transform = "translateX(0%)";
+    menu.style.height = "calc(100vh - 99px)";
+    body.style.overflow = "hidden";
+    html.style.overflow = "hidden";
+    cont3.style.display = "none";
+  }
+}
+
+
+
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      } 
+      slides[slideIndex-1].style.display = "flex";  
+      setTimeout(showSlides, 4000);
+    }
+  </script>
+</body>
+</html>
