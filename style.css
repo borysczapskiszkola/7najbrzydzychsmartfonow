@@ -22,6 +22,12 @@ body{
   
 }
 
+.h4text{
+  color: white;
+  font-weight: bold;
+}
+  
+
 .cont1{
   position: relative;
   top: 0;
